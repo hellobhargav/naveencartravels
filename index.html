@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Car Travel's</title>
+    <link rel="stylesheet" href="assests/bootstrap/css/bootstrap.min.css">
+    <script src="assests/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--Counter Effect Script-->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="assests/countMe/countMe.min.js"></script>
+    <script>
+
+        window.onload = () => {
+            // $(selector).countMe(delay,speed)
+            $("#num1").countMe(40, 10);
+            $("#num2").countMe(30, 30);
+            $("#num3").countMe(40, 50);
+            $("#num4").countMe(100, 200);
+        }
+
+    </script>
+
+    <!--Jquery Link-->
+    <style>
+        .main_content {
+            height: 100vh;
+        }
+
+        .gal img {
+            width: 20%;
+            border: 10px solid transparent;
+        }
+
+        .gal {
+            text-align: center;
+
+        }
+
+        .gal img:hover {
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Naveen <span class="text-danger">Car Travel's</span></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Car's</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <h5 class="dropdown-header">With Driver</h5>
+                            <a class="dropdown-item" href="#">Hire a Car</a>
+                            <h5 class="dropdown-header">Without Driver</h5>
+                            <a class="dropdown-item" href="#">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel:+918885500279">Call Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:bhargavwd@gmail.com">Mail Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <section class="container-fluid">
+        <div class="row">
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-5 d-flex justify-content-center align-items-center">
+                <div class="text-center">
+                    <h1>Welcome to <br> <span class="text-danger"> Naveen Car Travel's</span></h1>
+                    <p>One of the best car maintainace and services in Vijayawada</p>
+                    <button class="btn btn-outline-danger px-5 " data-bs-toggle="modal" data-bs-target="#modalId">Hire
+                        Now</button>
+                    <button class="btn btn-outline-danger px-5" data-bs-toggle="modal" data-bs-target="#modalId">Book
+                        Now</button>
+                </div>
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-5  d-flex justify-content-center align-items-center">
+                <img src="assests/images/car.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </section>
+    <!--Modal-->
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="modalTitleId">Hire / Book Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="was-validated">
+                        <div class="form-floating mb-3">
+                            <input required type="text" pattern="[a-zA-Z]{}" class="form-control" name="name" id="name"
+                                placeholder="Name">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input required type="email" class="form-control" name="email" id="email"
+                                placeholder="Email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input required type="tel" pattern="[0-9]{10}" minlength="10" maxlength="10"
+                                class="form-control" name="mobile" id="mobile" placeholder="Mobile Number">
+                            <label for="mobile">Mobile Number</label>
+                            <div class="invalid-feedback">Enter 10*digit Mobile Number</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input required type="text" class="form-control" name="car" id="car"
+                                placeholder="Car Model">
+                            <label for="car">Car Model</label>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-outline-danger">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+
+    </script>
+
+    <section class="container text-center">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 p-2">
+                <h1><span id="num1">250</span>+ Car Services</h1>
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 p-2">
+                <h1><span id="num2">5</span>&#9733; + Rating</h1>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 p-2">
+                <h1><span id="num3">250</span>+ Subcribers</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container my-5">
+       <div class="row">
+        <h1 class="text-center">Our <span class="text-danger">Services</span></h1>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card">
+                <img class="card-img-top" src="assests/images/car_services.jpg" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title">Car Services</h4>
+                    <p class="card-text">The 5 most popular cars are Maruti Suzuki Fronx, MG Comet EV, Tata Nexon,
+                        Maruti Suzuki Brezza and Mahindra Thar. The 5 most popular upcoming cars are Maruti</p>
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalId">Book
+                        Now</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card">
+                <img class="card-img-top" src="assests/images/car_services.jpg" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title">Car Services</h4>
+                    <p class="card-text">The 5 most popular cars are Maruti Suzuki Fronx, MG Comet EV, Tata Nexon,
+                        Maruti Suzuki Brezza and Mahindra Thar. The 5 most popular upcoming cars are Maruti</p>
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalId">Book
+                        Now</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card">
+                <img class="card-img-top" src="assests/images/car_services.jpg" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title">Car Services</h4>
+                    <p class="card-text">The 5 most popular cars are Maruti Suzuki Fronx, MG Comet EV, Tata Nexon,
+                        Maruti Suzuki Brezza and Mahindra Thar. The 5 most popular upcoming cars are Maruti</p>
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalId">Book
+                        Now</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+            <div class="card">
+                <img class="card-img-top" src="assests/images/car_services.jpg" alt="Title">
+                <div class="card-body">
+                    <h4 class="card-title">Car Services</h4>
+                    <p class="card-text">The 5 most popular cars are Maruti Suzuki Fronx, MG Comet EV, Tata Nexon,
+                        Maruti Suzuki Brezza and Mahindra Thar. The 5 most popular upcoming cars are Maruti</p>
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalId">Book
+                        Now</button>
+
+                </div>
+            </div>
+        </div>
+       </div>
+    </section>
+    <section class="container-fluid text-center">
+        <h1>Our Pics Gallary</h1>
+        <div class="gal p-5">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/transport-flat-muscle-car-illustration_23-2149450022.jpg?w=740&t=st=1683370298~exp=1683370898~hmac=6881a1fe215e31e155888b0c75f09b67ecf155a7c3e64d6c90fd697bfce5774a"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-lowrider-illustration_23-2149699023.jpg?w=740&t=st=1683370719~exp=1683371319~hmac=85f4707c6dc98fb465cc34d966eca161f3bb529092701740cdaaa6b67dd1d518"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-lowrider-illustration_23-2149699023.jpg?w=740&t=st=1683370719~exp=1683371319~hmac=85f4707c6dc98fb465cc34d966eca161f3bb529092701740cdaaa6b67dd1d518"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-lowrider-illustration_23-2149699023.jpg?w=740&t=st=1683370719~exp=1683371319~hmac=85f4707c6dc98fb465cc34d966eca161f3bb529092701740cdaaa6b67dd1d518"
+                alt="">
+            <img src="https://img.freepik.com/free-vector/hand-drawn-lowrider-illustration_23-2149699023.jpg?w=740&t=st=1683370719~exp=1683371319~hmac=85f4707c6dc98fb465cc34d966eca161f3bb529092701740cdaaa6b67dd1d518"
+                alt="">
+        </div>
+    </section>
+    <section class="contact row container-fluid text-center">
+        <h1>Watch Our Conetent</h1>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YvfnCtIwbnY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center ">
+            <div>
+                <h2>Hire Cars from US</h2>
+                <h2>Rent Cars a from US</h2>
+                <h2>Self Driving Cars a from US</h2>
+            </div>
+        </div>
+    </section>
+    <section class="contact row container-fluid text-center">
+        <h1>Know More</h1>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center ">
+            <div>
+                <h2>Hire Cars from US</h2>
+                <h2>Rent Cars a from US</h2>
+                <h2>Self Driving Cars a from US</h2>
+            </div>
+        </div>
+        <div class="p-5 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3240939978937!2d78.38191677434223!3d17.444195401167747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ed2dea4c17%3A0xd49a55db035ba737!2sElearn%20Infotech%20-%20MERN%20Java%20Python%20Fullstack%20%7C%20UI%20Development%20React%20JS%20%7C%20PHP%20Web%20Development%20UI%20UX%20Courses%20Training%20Hyderabad!5e0!3m2!1sen!2sin!4v1683371212190!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer class="container-fluid p-2 mt-3 text-center text-bg-dark">
+        <p>&copy; Developed by &lt;hellobhargav&gt;</p>
+    </footer>
+</body>
+
+</html>
